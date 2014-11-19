@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="FragileCalculator.css" />
+		<!--<script src="calculation.js" type="text/javascript"></script>-->
+		<script src="MixedFraction.js" type="text/javascript"></script>
+		<script src="display_Sprint3.js" type="text/javascript"></script>
+		<title>
+			Fragile Calculator
+		</title>
+	</head>
+	<body>
+		<header>
+			<!--Fragile logo-->
+			<img alt="Fragile" src="logoFragile.gif">
+		</header>		
+			<div id = "tablecontainer">
+				<br />
+				<!--Display Field-->
+				<p id="displayBox">
+				<math> 
+					<mn class="whole"></mn>
+					<mfrac>
+						<mrow>
+							<mn class="numer"></mn>
+						</mrow>
+						<mrow>
+							<mn class="denom"></mn>
+						</mrow>
+					</mfrac>
+					
+					<mn class="whole"></mn>
+					<mfrac>
+						<mrow>
+							<mn class="numer"></mn>
+						</mrow>
+						<mrow>
+							<mn class="denom"></mn>
+						</mrow>
+					</mfrac>
+					
+					<mn class="whole"></mn>
+					<mfrac>
+						<mrow>
+							<mn class="numer"></mn>
+						</mrow>
+						<mrow>
+							<mn class="denom"></mn>
+						</mrow>
+					</mfrac>
+					
+					<mn class="whole"></mn>
+					<mfrac>
+						<mrow>
+							<mn class="numer"></mn>
+						</mrow>
+						<mrow>
+							<mn class="denom"></mn>
+						</mrow>
+					</mfrac>
+				</math>
+				</p>
+				<br />
+				<br />
+				<br />
+							
+				<!---buttons used for input of numbers--->
+				<table id="numberbuttons" style="display: inline-block;">
+					<tbody>
+						<tr>
+							<td><button class="numbers" id="number1" value="1" onclick="updateDisplay(this.id)">1</button></td>
+							<td><button class="numbers" id="number2" value="2" onclick="updateDisplay(this.id)">2</button></td>
+							<td><button class="numbers" id="number3" value="3" onclick="updateDisplay(this.id)">3</button></td>
+						</tr>
+						
+						<tr> 
+							<td><button class="numbers" id="number4" value="4" onclick="updateDisplay(this.id)">4</button></td>
+							<td><button class="numbers" id="number5" value="5" onclick="updateDisplay(this.id)">5</button></td>
+							<td><button class="numbers" id="number6" value="6" onclick="updateDisplay(this.id)">6</button></td>
+						</tr>
+							
+						<tr>
+							<td><button class="numbers" id="number7" value="7" onclick="updateDisplay(this.id)">7</button></td>
+							<td><button class="numbers" id="number8" value="8" onclick="updateDisplay(this.id)">8</button></td>
+							<td><button class="numbers" id="number9" value="9" onclick="updateDisplay(this.id)">9</button></td>
+						</tr>
+						<tr>
+							<td><button class="numbers" id="number0" value="0" onclick="updateDisplay(this.id)">0</button></td>
+							<td><button id="mixedFracFoc">
+								<math>
+									<mfrac>
+										<!-- Numerator -->
+										<mrow>
+											<mi>&uhblk;</mi>
+						  			</mrow>
+						  			<!-- Denominator -->
+						  			<mrow>
+						    			<mi>&lhblk;</mi>
+						  			</mrow>
+									</mfrac>
+								</math>
+							</button></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<!--buttons used for calculation-->
+			<table id="operator buttons" style="display: inline-block;">
+				<tbody>
+				<tr> 
+					<td><button id="addition" value="+" onclick="displaySign(this.id)">+</button></td>
+					<td><button id="reset">R</button></td>
+				</tr>
+							
+				<tr> 
+					<td><button id="subtraction" value="-" onclick="displaySign(this.id)">-</button></td>
+					<td><button id="backspace">Inv</button></td>
+				</tr>
+				
+				<tr>
+					<td><button id="multiplication" value="x" onclick="displaySign(this.id)">x</button></td>
+					<td><button id="division" value="÷" onclick="displaySign(this.id)">/</button></td>
+				</tr>
+				
+				<tr>
+					<td><button id="clear" onclick="clear()">C</button></td>
+				</tr>
+				
+				<tr>
+					<td><button id="equals">=</button></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
